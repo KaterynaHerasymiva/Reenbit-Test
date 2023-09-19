@@ -1,0 +1,148 @@
+*{
+  font-family: "Century Schoolbook";
+}
+.form-group{
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: auto;
+  height: auto;
+  align-content: space-between;
+}
+label{
+  margin-bottom: 2px;
+}
+
+input{
+  padding: 3px 10px 3px 10px;
+  width: 150px;
+  background-color: whitesmoke;
+  border-style: solid;
+  border-width: 1px;
+  border-color: darkgray ;
+  color: slategrey;
+  border-radius: 2px;
+
+}
+
+.select-file {
+  padding: 3px 10px 3px 10px;
+  width: 300px;
+  background-color: whitesmoke;
+  border: solid 1px darkgray;
+  color: slategrey;
+  border-radius: 2px;
+}
+
+.select-file:focus-visible{
+  border-color: darkgray;
+  border-width: 2px;
+}
+.select-file:hover{
+  border-color: darkgray;
+  border-width: 2px;
+}
+
+.submit-button{
+  padding: 3px 10px 3px 10px;
+  border-radius: 5px;
+  margin-left: 35%;
+  font-size: larger;
+}
+
+.submit-button:enabled{
+  background-color: beige;
+  border-style: solid;
+  border-width: 2px;
+  border-color: darkgray;
+  color: black;
+
+}
+
+.upload {
+  padding-left: 10px;
+}
+
+input:focus-visible{
+  outline: none;
+  border: solid 2px darkgray;
+}
+
+internal-autofill-selected {
+  background-color: beige!important;
+  border-color: deeppink!important;
+}
+
+.input-control.ng-invalid.ng-touched{
+  border: solid 2px deeppink;
+}
+
+form{
+  box-sizing: border-box;
+  border: darkgray 2px solid ;
+  background-color: #d9f4fe;
+  border-radius: 6px;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.head{
+  background-color: lightblue;
+  width: 100%;
+  text-align: center;
+  border-radius: 5px 5px 0 0;
+  }
+
+.submit{
+  display: block;
+  width: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 0 0 5px 5px;
+  background-color: lightblue;
+}
+
+
+button:active {
+  transform: scale(0.98);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+.button-file{
+  background-color: lightblue;
+  border-style: solid;
+  border-width: 2px;
+  border-color: darkgray;
+  color: black;
+  border-radius: 2px;
+}
+
+label::after {
+  content: "*";
+  width: 1.5em;
+  margin-right: 1.5em;
+  color: red;
+}
+
+.alert  {
+  position: fixed;
+  top: 0;
+  right: 0.5rem;
+  border:3px solid rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 2rem;
+  background: #d9f4fe;
+  color: black;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition:  all 0.2s ease-in-out;
+  opacity: 0;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(1.25rem);
+}

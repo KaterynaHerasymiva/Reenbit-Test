@@ -1,0 +1,57 @@
+<form
+  #f="ngForm"
+  name="uploadForm"
+  (ngSubmit)="onSubmit(f)" >
+  <div class="head">
+    <h3>UPLOAD YOUR FILE</h3>
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email Address</label>
+    <input
+      type="email"
+      id="email"
+      [ngModel]
+      name="email"
+      required
+      email
+      #mail
+      (change)="onChangeMail(mail)"
+      class="input-control">
+    </div>
+  <div class="form-group">
+    <label for="file">Select File To Upload</label>
+    <div class="select-file">
+    <input
+      type="file"
+      id="file"
+      #file
+      name="file"
+      ngModel
+      placeholder="Select file"
+      (change)="uploadFile(file.files)"
+      accept=".docx"
+      style="display:none;">
+    <button
+      type="button"
+      class="button-file"
+      (click)="file.click()">
+      Select File
+    </button>
+    <span class="upload" *ngIf="fileToUpload">
+      {{fileToUpload.name}}
+    </span>
+    <span class="upload" *ngIf="!fileToUpload">
+      No File Chosen
+    </span>
+    </div>
+  </div>
+  <div class="submit">
+    <button class="submit-button" type="submit" [disabled]="!mail.reportValidity() || !file.value">
+    Upload
+    </button>
+  </div>
+  <div class="alert" [class.visible]="alertIsVisible">
+    Upload success!
+  </div>
+</form>
