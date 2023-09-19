@@ -1,6 +1,5 @@
-import {HttpClient, HttpEventType, HttpErrorResponse} from '@angular/common/http';
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
-import {HttpClientModule} from '@angular/common/http';
+import {HttpClient, HttpErrorResponse} from '@angular/common/http';
+import {Component,  OnInit} from '@angular/core';
 import {NgForm} from "@angular/forms";
 
 @Component({
@@ -31,6 +30,7 @@ export class UploadComponent implements OnInit {
     if (this.alertIsVisible) {
       return;
     }
+
     this.alertIsVisible = true;
     setTimeout(()=> this.alertIsVisible = false,2500)
   }
@@ -39,12 +39,13 @@ export class UploadComponent implements OnInit {
     if (!this.fileToUpload) {
       return;
     }
+    
     const formData = new FormData();
     formData.append('file', this.fileToUpload, this.fileToUpload.name);
     formData.append('email', this.email ? this.email : '');
     this.http.post('https://reenbitherasymiva.azurewebsites.net/FileUploader/UploadFile', formData)
       .subscribe({
-        next: (event) => {
+        next: () => {
           this.showAlert();
           uploadForm.resetForm();
           this.fileToUpload=undefined;
