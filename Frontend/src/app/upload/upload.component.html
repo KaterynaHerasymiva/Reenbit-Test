@@ -39,7 +39,7 @@
       Select File
     </button>
     <div class="upload" *ngIf="fileToUpload">
-      {{fileToUpload.name}}
+      {{fileToUpload.name}}<span class="tooltiptext">{{fileToUpload.name}}</span>
     </div>
     <div class="upload" *ngIf="!fileToUpload">
       No File Chosen

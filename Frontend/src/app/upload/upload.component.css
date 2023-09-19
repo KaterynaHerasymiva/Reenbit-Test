@@ -1,6 +1,7 @@
 *{
   font-family: "Century Schoolbook";
 }
+
 .form-group{
   padding: 10px;
   display: flex;
@@ -10,6 +11,7 @@
   height: auto;
   align-content: space-between;
 }
+
 label{
   margin-bottom: 2px;
 }
@@ -23,7 +25,6 @@ input{
   border-color: darkgray ;
   color: slategrey;
   border-radius: 2px;
-
 }
 
 .select-file {
@@ -42,6 +43,7 @@ input{
   border-color: darkgray;
   border-width: 2px;
 }
+
 .select-file:hover{
   border-color: darkgray;
   border-width: 2px;
@@ -60,7 +62,6 @@ input{
   border-width: 2px;
   border-color: darkgray;
   color: black;
-
 }
 
 .upload {
@@ -79,6 +80,10 @@ input:focus-visible{
 internal-autofill-selected {
   background-color: beige!important;
   border-color: deeppink!important;
+}
+
+.input-control{
+  width: 285px;
 }
 
 .input-control.ng-invalid.ng-touched{
@@ -112,7 +117,6 @@ form{
   border-radius: 0 0 5px 5px;
   background-color: lightblue;
 }
-
 
 button:active {
   transform: scale(0.98);
@@ -154,4 +158,24 @@ label::after {
 .visible {
   opacity: 1;
   transform: translateY(1.25rem);
+}
+
+.upload .tooltiptext {
+  visibility: hidden;
+  width: auto;
+  background-color: beige;
+  color: black;
+  text-align: center;
+  border: solid darkgray 1px;
+  border-radius: 3px;
+  padding: 5px 0;
+  font-size: xx-small;
+  position: absolute;
+  left: 170px;
+  top: 185px;
+  z-index: 1;
+}
+
+.upload:hover .tooltiptext {
+  visibility: visible;
 }

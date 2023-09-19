@@ -1,5 +1,5 @@
 import {HttpClient, HttpEventType, HttpErrorResponse} from '@angular/common/http';
-import {Component, EventEmitter, OnInit, Output, ViewChild} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {HttpClientModule} from '@angular/common/http';
 import {NgForm} from "@angular/forms";
 
