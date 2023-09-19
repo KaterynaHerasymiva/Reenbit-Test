@@ -45,7 +45,6 @@ export class UploadComponent implements OnInit {
     this.http.post('https://reenbitherasymiva.azurewebsites.net/FileUploader/UploadFile', formData)
       .subscribe({
         next: (event) => {
-          //this.message = 'Upload success.';
           this.showAlert();
           uploadForm.resetForm();
           this.fileToUpload=undefined;

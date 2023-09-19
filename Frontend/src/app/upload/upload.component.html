@@ -11,7 +11,7 @@
     <input
       type="email"
       id="email"
-      [ngModel]
+      ngModel
       name="email"
       required
       email
@@ -38,12 +38,12 @@
       (click)="file.click()">
       Select File
     </button>
-    <span class="upload" *ngIf="fileToUpload">
+    <div class="upload" *ngIf="fileToUpload">
       {{fileToUpload.name}}
-    </span>
-    <span class="upload" *ngIf="!fileToUpload">
+    </div>
+    <div class="upload" *ngIf="!fileToUpload">
       No File Chosen
-    </span>
+    </div>
     </div>
   </div>
   <div class="submit">
